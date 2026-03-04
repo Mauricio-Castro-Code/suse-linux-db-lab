@@ -45,10 +45,10 @@ This project serves as a hands-on simulation of an enterprise SAP back-end envir
 * Demonstrated intermediate scripting capabilities and database connectivity without relying on external network protocols (Unix sockets).
 
 ### 📸 Evidence
-> *Escribimos nuestro script*
+> *Developing a custom Python automation script using the psycopg2 adapter to generate and structure 500+ synthetic SAP user records.*
 <img width="1340" height="810" alt="Captura de pantalla 2026-03-04 a la(s) 2 57 42 p m" src="https://github.com/user-attachments/assets/4f620021-8f40-4d19-a125-7841d510f965" />
 
-> *Ejecturamos nuestro script*
+> *Executing the Python script via the command-line interface to securely inject the synthetic data volume directly into the PostgreSQL engine.*
 <img width="1083" height="149" alt="Captura de pantalla 2026-03-04 a la(s) 3 32 56 p m" src="https://github.com/user-attachments/assets/bfb78840-d0b7-45a5-9fff-824e7d17bbc2" />
 
 ---
@@ -58,11 +58,11 @@ This project serves as a hands-on simulation of an enterprise SAP back-end envir
 * Executed logical backups using `pg_dump` and successfully performed a full system restoration, guaranteeing data persistence and SLA compliance.
 
 ### 📸 Evidence
-> *Hacemos un Backup de nuestra DB*
+> *Performing a full logical backup of the populated database utilizing native PostgreSQL tools (pg_dump) to ensure data preservation.*
 <img width="1338" height="199" alt="Captura de pantalla 2026-03-04 a la(s) 3 10 40 p m" src="https://github.com/user-attachments/assets/95dd027d-8aff-40eb-a3a9-8f51d445e1ed" />
 
 
-> *Borramos la Base de Datos*
+> *Intentionally dropping the primary database to simulate a critical system failure and validate our disaster recovery protocols.*
 <img width="1342" height="202" alt="Captura de pantalla 2026-03-04 a la(s) 3 13 41 p m" src="https://github.com/user-attachments/assets/2e7d8873-5985-4ac3-9e2c-153582283a91" />
 
 > *Demonstrating the successful restoration of 500+ records after a simulated database crash.*
