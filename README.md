@@ -1,186 +1,48 @@
-# SUSE Linux Database Lab
+# SAP Basis Infrastructure Simulation Lab 🛠️
 
-## Project Overview
+## 🎯 Objective
+This project serves as a hands-on simulation of an enterprise SAP back-end environment. The goal is to demonstrate practical proficiency in Linux system administration, command-line operations, and relational database management—core competencies required for a Junior SAP Basis / TMS Engineer.
 
-This project simulates a **corporate-style Linux server environment**
-for the installation and management of a relational database system. The
-goal is to demonstrate practical skills in **Linux system
-administration, database deployment, and infrastructure automation**
-using open-source technologies.
+## 💻 Tech Stack & Environment
+* **Operating System:** openSUSE Leap 16.0 (AArch64) - Headless Server setup
+* **Database Engine:** PostgreSQL
+* **Virtualization:** Parallels Desktop (running on Apple Silicon / ARM architecture)
+* **Core Tools:** Bash CLI, `zypper` package manager, `systemd`
 
-Instead of distributing a full virtual machine, this repository provides
-the **automation script and configuration steps** required to replicate
-the environment on any compatible system.
+## ⚙️ Key Operations Executed
 
-This approach reflects real-world engineering practices where
-infrastructure is documented and automated rather than manually
-reproduced.
+### 1. Headless Server Deployment & Navigation
+* Deployed an openSUSE environment without a Graphical User Interface (GUI) to simulate real-world server conditions.
+* Navigated and administered the system exclusively via the Command Line Interface (CLI).
 
-------------------------------------------------------------------------
+### 2. Package & Service Management
+* Utilized SUSE's native package manager (`zypper`) to fetch, install, and configure the PostgreSQL server.
+* Managed background services (daemons) using `systemctl`, ensuring the database engine is enabled for persistence (`systemctl enable`) and monitoring its health status (`systemctl status`).
 
-## Objective
-
-To simulate the deployment of a **database server in a SUSE Linux
-environment**, including:
-
--   Linux system administration
--   Database installation and initialization
--   Service management using `systemctl`
--   Package management using `zypper`
--   Infrastructure automation via Bash scripting
-
-The project mirrors how **enterprise environments provision database
-servers for internal applications**.
-
-------------------------------------------------------------------------
-
-## Technology Stack
-
-| Technology | Description |
-|------------|-------------|
-| **openSUSE Leap 16.0 (AArch64)** | Enterprise-grade Linux distribution |
-| **PostgreSQL** | Open-source relational database |
-| **Bash** | Shell scripting for server automation |
-| **Zypper** | SUSE package manager |
-| **Systemd** | Service management framework |
+### 3. Database Administration & SQL
+* Switched user environments securely (`su - postgres`) to manage the database engine.
+* Created a test database (`sap_test`) and structured tables to simulate an SAP user registry.
+* Executed standard SQL queries (`CREATE`, `INSERT`, `SELECT`) to validate data integrity and operational success.
 
 ---
 
+## 📸 Lab Evidence
 
-------------------------------------------------------------------------
+*Note: The following screenshots validate the successful execution of CLI commands and database operations.*
 
-## Architecture
+### 1. Service Monitoring (systemctl)
+> *Demonstrating the PostgreSQL service actively running and enabled on the SUSE server.*
+![Systemctl Status](PON_AQUI_EL_LINK_DE_TU_IMAGEN_1)
 
-    +-----------------------+
-    |    Linux Server       |
-    |  openSUSE Leap 16.0  |
-    +----------+------------+
-               |
-               v
-    +-----------------------+
-    |     PostgreSQL DB     |
-    |  Relational Database  |
-    +-----------------------+
+### 2. Database Creation & SQL Queries
+> *Demonstrating successful connection to the DB engine, table creation, and querying synthetic SAP user data.*
+![SQL Query Result](PON_AQUI_EL_LINK_DE_TU_IMAGEN_2)
 
-The server is provisioned through a **bash automation script** that
-installs and enables the database service.
+---
 
-------------------------------------------------------------------------
+## 🚀 Next Steps (Roadmap)
+* **Phase 2:** Disaster Recovery Simulation (Implementing logical backups with `pg_dump`, simulating database corruption, and executing full restoration procedures).
+* **Phase 3:** Synthetic Data Generation via Python scripting.
 
-## Automation Script
-
-The repository includes the script:
-
-`install_db.sh`
-
-This script performs the following operations:
-
-1.  Refresh system repositories
-2.  Install PostgreSQL packages
-3.  Enable PostgreSQL service
-4.  Start the database service
-
-This represents a **basic infrastructure automation pattern used in
-DevOps workflows**.
-
-------------------------------------------------------------------------
-
-## Installation Script Example
-
-``` bash
-#!/bin/bash
-
-echo "Updating repositories..."
-sudo zypper refresh
-
-echo "Installing PostgreSQL..."
-sudo zypper install -y postgresql postgresql-server
-
-echo "Enabling PostgreSQL service..."
-sudo systemctl enable postgresql
-
-echo "Starting PostgreSQL service..."
-sudo systemctl start postgresql
-
-echo "Database installation completed successfully."
-```
-
-------------------------------------------------------------------------
-
-## How to Run
-
-Clone the repository:
-
-``` bash
-git clone https://github.com/yourusername/suse-linux-db-lab.git
-cd suse-linux-db-lab
-```
-
-Give execution permissions:
-
-``` bash
-chmod +x install_db.sh
-```
-
-Run the script:
-
-``` bash
-./install_db.sh
-```
-
-------------------------------------------------------------------------
-
-## Screenshots
-
-Add screenshots of your environment inside an `images` folder:
-
--   System environment
--   PostgreSQL installation
--   PostgreSQL service running
-
-Example:
-
-    images/system.png
-    images/postgres_install.png
-    images/postgres_running.png
-
-------------------------------------------------------------------------
-
-## Skills Demonstrated
-
--   Linux system administration
--   Database server deployment
--   Bash automation
--   Infrastructure reproducibility
--   Command-line environment management
-
-------------------------------------------------------------------------
-
-## Future Improvements
-
-Possible enhancements:
-
--   Database user and role management
--   PostgreSQL remote access configuration
--   Backup automation scripts
--   Containerized deployment using Docker
--   Infrastructure provisioning using Ansible or Terraform
-
-------------------------------------------------------------------------
-
-## Author
-
-Mauricio Castro Valencia\
-Computer Science Engineering Student
-
-GitHub\
-https://github.com/Mauricio-Castro-Code
-
-LinkedIn\
-https://www.linkedin.com/in/mauricio-castro-valencia-125985200/
-
-------------------------------------------------------------------------
-
-## License
-
-This project is provided for **educational and demonstration purposes**.
+---
+*Created as a practical portfolio project - March 2026*
