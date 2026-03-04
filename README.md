@@ -32,13 +32,14 @@ This project serves as a hands-on simulation of an enterprise SAP back-end envir
 
 ### 1. Service Monitoring (systemctl)
 > *Demonstrating the PostgreSQL service actively running and enabled on the SUSE server.*
-![Systemctl Status](<img width="1023" height="805" alt="Captura de pantalla 2026-03-04 a la(s) 1 00 10 p m" src="https://github.com/user-attachments/assets/14bd7604-98b5-4457-bd7b-522e7abfd196" />
-)
+![Systemctl Status]()
+> <img width="1023" height="805" alt="Captura de pantalla 2026-03-04 a la(s) 1 00 10 p m" src="https://github.com/user-attachments/assets/14bd7604-98b5-4457-bd7b-522e7abfd196" />
 
 ### 2. Database Creation & SQL Queries
 > *Demonstrating successful connection to the DB engine, table creation, and querying synthetic SAP user data.*
-![SQL Query Result](<img width="1024" height="572" alt="Captura de pantalla 2026-03-04 a la(s) 1 04 12 p m" src="https://github.com/user-attachments/assets/0f879817-0ec4-4473-a786-06ebadb36ec2" />
+![SQL Query Result](
 )
+> <img width="1024" height="572" alt="Captura de pantalla 2026-03-04 a la(s) 1 04 12 p m" src="https://github.com/user-attachments/assets/0f879817-0ec4-4473-a786-06ebadb36ec2" />
 
 ---
 
