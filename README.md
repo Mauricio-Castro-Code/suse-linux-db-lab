@@ -73,8 +73,7 @@ This project serves as a hands-on simulation of an enterprise SAP back-end envir
 * Developed a custom Bash script (`health_check.sh`) to proactively monitor critical server resources, including available RAM, root disk capacity, and PostgreSQL daemon status.
 * Configured automated background execution and log generation by scheduling a `cronjob` to run the health check every 5 minutes, ensuring continuous system observability.
 
----
-### 📸 Phase 3 Evidence
+### 📸 PEvidence
 
 > *Developing a custom Bash script via CLI to query system resources and database health status, outputting the results to an audit log.*
 <img width="1275" height="830" alt="Captura de pantalla 2026-03-08 a la(s) 8 42 04 p m" src="https://github.com/user-attachments/assets/8abdc09d-ffeb-4681-8006-74aa4536a412" />
